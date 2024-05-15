@@ -6,23 +6,24 @@
 html,body{
     height : 100vh;
     width :100vw;
+    font-family : "Reddit Sans", sans-serif
 }
 .main{
     display:grid;
     background-color :/* rgb(225, 199, 199);*//* #CFCFC4;*/ #D0CDC2;
     height : 100%;
     width :100%;
-    grid-template-columns: 25% 25% 50%;
-    grid-template-rows: 30% 50% 20%;
+    grid-template-columns: 22% 22% 48% 8%;
+    grid-template-rows: 26% 50% 24%;
 }
 
 #elem1{
     background :transparent;
-    padding : 5% 5%;
+    padding : 7%;
 }
 #diamond{
-    height : 15px;
-    width : 15px;
+    height : 20px;
+    width : 20px;
     background-color: black;
     transform :rotate(45deg); 
 }
@@ -32,6 +33,9 @@ html,body{
     text-align: right;
     justify-self: end;
     text-transform: capitalize;
+}
+#elem2 i{
+    display :none;
 }
 #elem3{
     background: transparent;
@@ -45,42 +49,70 @@ html,body{
 .thirddiv{
     text-transform: uppercase;
     font-weight: 600;
-    font-size :3rem;
+    font-size : 4rem;
+    font-family: montserrat;
+    line-height : 0.9;
+
 }
 #elem3 .thirddiv:nth-of-type(2){
-    margin-left :10%;
+    margin-left :14%;
 }
 #elem3 .thirddiv:nth-of-type(4){
-    margin-left :20%;
+    margin-left :24%;
 }
 #elem4{
     background : transparent;
     grid-column :1 /3;
-    margin : 5%;
-
+    margin :5% ;
+    margin-top : 8%;
+   
 }
 #elem4 p{
-    width :70%;
+    width :80%;
 }
 
 #elem5{
-    background-color :purple;
+   
     grid-row: 1/4;
     grid-column : 3;
     margin : 5%;
     overflow: hidden;
 }
 video {
- object-fit: contain;
- margin-right  : 20%;
+ object-fit: cover;
+ 
+ height :100%;
+ width :100%;
 
 }
+#arrow{
+    border-radius :50%;
+    position : absolute;
+    height : 7vw;
+    width : 7vw;
+    background-color: orange;
+    z-index :2;
+    top :41%;
+    left :43%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#elem6{
+    display:flex;
+    padding:15%;
+    padding-top : 2vw;
+    justify-content: flex-end;
+    grid-row: 1/4;
+    grid-column:4;
+    background : transparent;
+}
 
-@media(max-width : 600px){
+@media(max-width : 771px){
     .main{
         height: 100%;
         width :100%;
-        grid-template-rows: 20% 30% 20% 30%;
+        grid-template-rows: 10% 35% 30% 25%;
         grid-template-columns : 50% 50%;
     }
     #elem1{
@@ -90,18 +122,35 @@ video {
     #elem2{
         grid-row :1; 
         grid-column :2;
+        display :flex;
+        justify-content : flex-end;
+        padding :10%;
+    }
+    #elem2 h3{
+        display :none;
+    }
+    #elem2 i{
+        display :block;
+
     }
     #elem3{
         grid-row : 2;
         grid-column :1/3;
     }
+    .thirddiv{
+        font-size: 2rem;
+    }
     #elem4{
         grid-column :1/3;
-        grid-row :3;
+        grid-row :4;
     }
     #elem5{
         grid-column :1/3;
-        grid-row :4;
+        grid-row :3;
+        margin : 0% 5%;
+    }
+    #elem6{
+        display : none;
     }
    
     
