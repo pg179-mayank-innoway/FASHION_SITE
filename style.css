@@ -161,8 +161,8 @@ video {
         position : absolute;
         height : 12vw;
         width : 12vw;
-        min-width: none;
-        min-height: none;
+        min-width: 40px;
+        min-height: 40px;
         transform :rotate(90deg);
         background-color: orange;
         z-index :2;
